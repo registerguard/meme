@@ -27,7 +27,7 @@ var MEME_SETTINGS = {
   overlayAlpha: 0.5, // Opacity of image overlay.
 
   // Image overlay color, or blank ('') for no overlay:
-  overlayColor: '#000',
+  overlayColor: '#ddd',
   // Overlay color options: set to empty array to disable overlay options selector.
   overlayColorOpts: ['#000', '#777'],
   paddingRatio: 0.05, // Percentage of canvas width to use as edge padding.
@@ -55,10 +55,10 @@ var MEME_SETTINGS = {
   // Otherwise, just leave "data" attributes blank and allow images to load from your server.
   watermarkOpts: [
     // {text: 'RG', value: '<%= image_path("rg-white-115.png") %>', data: '<%= asset_data_uri("rg-white-115.png") %>'},
-    {text: 'Text watermark: The Register-Guard', value: '<%= image_path("trg-white.png") %>', data: '<%= asset_data_uri("trg-white.png") %>'},
-    {text: 'Photo white watermark: RG', value: '<%= image_path("rg-white-64.png") %>', data: '<%= asset_data_uri("rg-white-64.png") %>'},
-    {text: 'Photo black: RG', value: '<%= image_path("rg-black-64.png") %>', data: '<%= asset_data_uri("rg-black-64.png") %>'},
-    {text: 'Photo blue: RG', value: '<%= image_path("rg-blue-64.png") %>', data: '<%= asset_data_uri("rg-blue-64.png") %>'}
+    {text: 'Text (The Register-Guard)', value: '<%= image_path("trg-white.png") %>', data: '<%= asset_data_uri("trg-white.png") %>'},
+    {text: 'Photo white (RG)', value: '<%= image_path("rg-white-64.png") %>', data: '<%= asset_data_uri("rg-white-64.png") %>'},
+    {text: 'Photo black (RG)', value: '<%= image_path("rg-black-64.png") %>', data: '<%= asset_data_uri("rg-black-64.png") %>'},
+    {text: 'Photo blue (RG)', value: '<%= image_path("rg-blue-64.png") %>', data: '<%= asset_data_uri("rg-blue-64.png") %>'}
   ],
 
   width: 755 // Canvas rendering width.

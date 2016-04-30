@@ -150,7 +150,9 @@ MEME.MemeCanvasView = Backbone.View.extend({
         }
 
         ctx.globalAlpha = d.watermarkAlpha;
-        ctx.drawImage(m.watermark, 0, 0, bw, bh, d.width-padding-tw, d.height-padding-th, tw, th);
+//        ctx.drawImage(m.watermark, 0, 0, bw, bh, d.width-padding-tw, d.height-padding-th, tw, th);
+//        ctx.drawImage(m.watermark, 0, 0, bw, bh, d.width-padding-tw, 20, tw, th);
+        ctx.drawImage(m.watermark, 0, 0, bw, bh, d.width-padding-tw, padding, tw, th);
         ctx.globalAlpha = 1;
       }
     }
