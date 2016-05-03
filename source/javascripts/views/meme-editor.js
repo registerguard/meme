@@ -66,6 +66,7 @@ MEME.MemeEditorView = Backbone.View.extend({
     this.$('#text-align').val(d.textAlign);
     this.$('#text-shadow').prop('checked', d.textShadow);
     this.$('#overlay').find('[value="'+d.overlayColor+'"]').prop('checked', true);
+    this.$('#overlay-alpha').val(d.overlayAlpha);
   },
 
   events: {
@@ -80,7 +81,8 @@ MEME.MemeEditorView = Backbone.View.extend({
     'change [name="overlay"]': 'onOverlayColor',
     'dragover #dropzone': 'onZoneOver',
     'dragleave #dropzone': 'onZoneOut',
-    'drop #dropzone': 'onZoneDrop'
+    'drop #dropzone': 'onZoneDrop',
+    'input #overlay-alpha': 'onAlpha'
   },
 
   onCredit: function() {
@@ -118,6 +120,10 @@ MEME.MemeEditorView = Backbone.View.extend({
 
   onOverlayColor: function(evt) {
     this.model.set('overlayColor', this.$(evt.target).val());
+  },
+
+  onAlpha: function() {
+      this.model.set('overlayAlpha', this.$('#overlay-alpha').val());
   },
 
   getDataTransfer: function(evt) {
